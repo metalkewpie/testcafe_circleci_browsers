@@ -1,0 +1,10 @@
+{
+    "compilerOptions": {
+        "typescript": {
+            "options": {
+                "experimentalDecorators": "true",
+                "resolveJsonModule": true
+            }
+        }
+    }
+}

@@ -1,0 +1,24 @@
+{
+  "name": "testcafe_circleci_browsers",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/metalkewpie/testcafe_circleci_browsers.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/metalkewpie/testcafe_circleci_browsers/issues"
+  },
+  "homepage": "https://github.com/metalkewpie/testcafe_circleci_browsers#readme",
+  "devDependencies": {
+    "dayjs": "^1.11.2",
+    "testcafe": "^1.18.6"
+  }
+}
