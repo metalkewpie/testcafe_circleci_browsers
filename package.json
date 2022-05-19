@@ -19,6 +19,7 @@
   "homepage": "https://github.com/metalkewpie/testcafe_circleci_browsers#readme",
   "devDependencies": {
     "dayjs": "^1.11.2",
-    "testcafe": "^1.18.6"
+    "testcafe": "^1.18.6",
+    "testcafe-reporter-html": "^1.4.6"
   }
 }
