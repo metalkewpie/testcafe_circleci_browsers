@@ -7,11 +7,9 @@ orbs:
 
 jobs:
   tcb-test:
-
     docker:
       - image: cimg/node:16.14.2
       #- image: cimg/node:lts-browsers
-
     steps:
       - checkout
       - browser-tools/install-chrome
