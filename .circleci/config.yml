@@ -18,12 +18,12 @@ jobs:
           command: npm install testcafe;
                    npm install dayjs;
                    npm install testcafe-reporter-html;
-                   mkdir -p /reports;
-      - run: npx testcafe chrome:headless No1_2_3.ts --reporter html:/reports/html_report.html #,xunit:/reports/xml_report.xml
+                   mkdir -p /reports/aaa;
+      - run: npx testcafe chrome:headless No1_2_3.ts --reporter html:/reports/aaa/html_report.html #,xunit:/reports/xml_report.xml
       - store_test_results:
-          path: /reports
+          path: /reports/aaa
       - store_artifacts:
-          path: /reports
+          path: /reports/aaa
           destination: artifact-file
 
 workflows:
