@@ -36,4 +36,4 @@ workflows:
               only:
                 - master
     jobs:
-    - execute_sampleweb
+      - execute_sampleweb
