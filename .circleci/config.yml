@@ -27,13 +27,16 @@ jobs:
 
 workflows:
   version: 2
-  prodexec:
+  normal_workflow:
+    jobs:
+      - build
+  schedule_workflow:
     triggers:
       - schedule:
-          cron : "10,40 * * * *"
+          cron: "30 * * * *"
           filters:
             branches:
               only:
-                - master
+                - main
     jobs:
       - build
