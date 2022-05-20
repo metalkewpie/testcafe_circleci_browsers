@@ -18,7 +18,7 @@ jobs:
                    npm install dayjs;
                    npm install testcafe-reporter-html;
                    mkdir -p ./reports;
-      - run: npx testcafe chrome:headless No1_2_3.ts --reporter html:reports/html_report.html #,xunit:/reports/xml_report.xml
+      - run: npx testcafe chrome:headless No1_2_3.ts --reporter html:reports/html_report.html ,xunit:reports/xml_report.xml
       - store_test_results:
           path: reports
       - store_artifacts:
