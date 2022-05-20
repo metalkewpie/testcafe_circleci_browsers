@@ -28,5 +28,12 @@ jobs:
 
 workflows:
   e2e-test:
+    triggers:
+      - schedule:
+          cron: "*/15 * * * *"
+          filters:
+            branches:
+              only:
+                - master
     jobs:
       - tcb-test
