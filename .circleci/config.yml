@@ -30,7 +30,7 @@ workflows:
   e2e-test:
     triggers:
       - schedule:
-          cron: "0,10 * * * *"
+          cron: "*/10 * * * *"
           filters:
             branches:
               only:
