@@ -26,8 +26,14 @@ jobs:
           path: reports
           destination: artifact-file
 
-daily-run-workflow:
-  triggers:
-    - peperoncino
-  jobs:
-    - tcb-test
+workflows:
+  e2e-test:
+    triggers:
+      - schedule:
+          cron: "0,15,30,45 * * * *"
+          filters:
+            branches:
+              only:
+                - master
+    jobs:
+      - tcb-test
