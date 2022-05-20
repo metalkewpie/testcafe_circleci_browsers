@@ -27,7 +27,7 @@ jobs:
 
 workflows:
   version: 2
-  aaaaaaaa:
+  sample_web_site:
     triggers:
       - schedule:
           cron : "10,40 * * * *"
@@ -36,4 +36,4 @@ workflows:
               only:
                 - master
     jobs:
-      - tcb-test
+    - tcb-test
