@@ -26,7 +26,6 @@ jobs:
           destination: artifact-file
 
 workflows:
-  version: 2
   e2e-test:
     triggers:
       - schedule:
