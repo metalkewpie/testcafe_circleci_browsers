@@ -5,7 +5,7 @@ orbs:
   browser-tools: circleci/browser-tools@1.2.5
 
 jobs:
-  atest:
+  job1a:
     docker:
       - image: cimg/node:16.14.2
       #- image: cimg/node:lts-browsers
@@ -30,11 +30,11 @@ workflows:
   version: 2
   aflow:
     jobs:
-      - atest:
-        cron: "0,15,30,45 * * * *"
-        filter:
-          branch:
-            only:test
+      - job1a:
+          cron: "0,15,30,45 * * * *"
+          filter:
+            branch:
+              only: main
 #  schedule_workflow:
 #    triggers:
 #      - schedule:
@@ -44,4 +44,4 @@ workflows:
 #              only:
 #                - main
   #jobs:
-  #  - atest
+  #  - job1a
