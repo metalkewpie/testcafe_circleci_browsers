@@ -27,10 +27,10 @@ jobs:
           destination: artifact-file
 
 workflows:
-  #version: 2
-  #normal_workflow:
-  #  jobs:
-  #    - atest
+  version: 2
+  aflow:
+    jobs:
+      - atest
   #schedule_workflow:
   #  triggers:
   #    - schedule:
@@ -39,5 +39,5 @@ workflows:
   #          branches:
   #            only:
   #              - main
-  jobs:
-    - atest
+  #jobs:
+  #  - atest
