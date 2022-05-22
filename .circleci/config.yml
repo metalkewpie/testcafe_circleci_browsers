@@ -31,13 +31,13 @@ workflows:
   normal_workflow:
     jobs:
       - atest
-  schedule_workflow:
-    triggers:
-      - schedule:
-          cron: "30 * * * *"
-          filters:
-            branches:
-              only:
-                - main
-    jobs:
-      - atest
+  #schedule_workflow:
+  #  triggers:
+  #    - schedule:
+  #        cron: "30 * * * *"
+  #        filters:
+  #          branches:
+  #            only:
+  #              - main
+  #  jobs:
+  #    - atest
