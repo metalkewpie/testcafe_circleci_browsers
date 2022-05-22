@@ -30,14 +30,17 @@ workflows:
   version: 2
   aflow:
     jobs:
-      - atest
-  #schedule_workflow:
-  #  triggers:
-  #    - schedule:
-  #        cron: "30 * * * *"
-  #        filters:
-  #          branches:
-  #            only:
-  #              - main
+      - atest:
+        filter:
+          branch:
+            only:test
+#  schedule_workflow:
+#    triggers:
+#      - schedule:
+#          cron: "30 * * * *"
+#          filters:
+#            branches:
+#              only:
+#                - main
   #jobs:
   #  - atest
