@@ -29,11 +29,11 @@ jobs:
 workflows:
   version: 2
   workflow1:
-    triggers:
-      - schedule:
-          cron: "0 * * * *"
-          filters:
-            branches:
-              only: test
+#    triggers:
+#      - schedule:
+#          cron: "0 * * * *"
+#          filters:
+#            branches:
+#              only: test
     jobs:
       - job1a
