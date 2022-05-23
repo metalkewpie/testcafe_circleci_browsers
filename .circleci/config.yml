@@ -31,9 +31,9 @@ workflows:
   workflow1:
     triggers:
       - schedule:
-          cron: "0,15,30,45 * * * *"
+          cron: "0,30 * * * *"
           filters:
             branches:
-              only: master
+              only: test
     jobs:
       - job1a
