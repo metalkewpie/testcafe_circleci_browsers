@@ -28,20 +28,20 @@ jobs:
 
 workflows:
   version: 2
-  aflow:
+#  workflow1:
+#    jobs:
+#      - job1a:
+#          cron: "0,15,30,45 * * * *"
+#          filter:
+#            branch:
+#              only: main
+  schedule_workflow:
+    triggers:
+      - schedule:
+          cron: "30 * * * *"
+          filters:
+            branches:
+              only:
+                - main
     jobs:
-      - job1a:
-          cron: "0,15,30,45 * * * *"
-          filter:
-            branch:
-              only: main
-#  schedule_workflow:
-#    triggers:
-#      - schedule:
-#          cron: "30 * * * *"
-#          filters:
-#            branches:
-#              only:
-#                - main
-  #jobs:
-  #  - job1a
+      - job1a
