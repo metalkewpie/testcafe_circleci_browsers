@@ -1,12 +1,11 @@
 version: 2.1
 
-
 orbs:
   node: circleci/node@4.7
   browser-tools: circleci/browser-tools@1.2.5
 
 jobs:
-  tcb-test:
+  job1a:
     docker:
       - image: cimg/node:16.14.2
       #- image: cimg/node:lts-browsers
@@ -15,11 +14,12 @@ jobs:
       - browser-tools/install-chrome
       - run: 
           name: "preparation"
-          command: npm install testcafe;
-                   npm install dayjs;
-                   npm install testcafe-reporter-html;
-                   mkdir -p ./reports;
-      - run: npx testcafe chrome:headless No1_2_3.ts --reporter html:reports/html_report.html #,xunit:/reports/xml_report.xml
+          command: |
+            npm install testcafe;
+            npm install dayjs;
+            npm install testcafe-reporter-html;
+            mkdir -p ./reports;
+      - run: npx testcafe chrome:headless No1_2_3.ts --reporter html:reports/html_report.html ,xunit:reports/xml_report.xml
       - store_test_results:
           path: reports
       - store_artifacts:
@@ -27,13 +27,13 @@ jobs:
           destination: artifact-file
 
 workflows:
-  e2e-test:
+  version: 2
+  workflow1:
     triggers:
       - schedule:
           cron: "0,15,30,45 * * * *"
           filters:
             branches:
-              only:
-                - master
+              only: master
     jobs:
-      - tcb-test
+      - job1a
